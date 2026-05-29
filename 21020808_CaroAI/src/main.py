@@ -46,13 +46,13 @@ def main():
             print("\nLuot may (O):")
             
             if algo == 'minimax':
-                agent = Minimax(config.MAX_DEPTH, heuristic)
+                agent = Minimax(config.MAX_DEPTH, heuristic, time_budget=config.TIME_BUDGET)
                 start = time.time()
                 move, nodes = agent.search(board, 'O', 'X')
                 elapsed = (time.time() - start) * 1000
                 value, _ = agent._minimax(board, config.MAX_DEPTH, True, 'O', 'X', None, None)
             else:
-                agent = AlphaBeta(config.MAX_DEPTH, heuristic)
+                agent = AlphaBeta(config.MAX_DEPTH, heuristic, time_budget=config.TIME_BUDGET)
                 start = time.time()
                 move, nodes = agent.search(board, 'O', 'X')
                 elapsed = (time.time() - start) * 1000
