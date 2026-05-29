@@ -1,7 +1,7 @@
 import time
-from src.ai.minimax import Minimax
-from src.ai.alpha_beta import AlphaBeta
-from src.ai.heuristic import Heuristic
+from ai.minimax import Minimax
+from ai.alpha_beta import AlphaBeta
+from ai.heuristic import Heuristic
 
 class Comparator:
     def __init__(self, max_depth):
